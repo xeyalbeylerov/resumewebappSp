@@ -49,17 +49,17 @@
 
         <!--elave-->
 		<!--bunu Spring Tomcata jsp fayllarini tanitsin deye elave etdik-->
-		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-			<!--<scope>provided</scope>-->
-		</dependency>
-		<!--&lt;!&ndash;jstl&ndash;&gt;-->
 		<!--<dependency>-->
-			<!--<groupId>javax.servlet</groupId>-->
-			<!--<artifactId>jstl</artifactId>-->
-			<!--<version>1.2</version>-->
+			<!--<groupId>org.apache.tomcat.embed</groupId>-->
+			<!--<artifactId>tomcat-embed-jasper</artifactId>-->
+			<!--&lt;!&ndash;<scope>provided</scope>&ndash;&gt;-->
 		<!--</dependency>-->
+		<!--jstl-->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 
 		<!--db appi dependency olaraq elave edirik-->
 		<dependency>
@@ -67,7 +67,14 @@
 			<artifactId>ResumeDbAppJPASpring</artifactId>
 			<version>0.0.1</version>
 		</dependency>
+		<!--validation-->
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+
 	</dependencies>
+
 
 	
 	<build>

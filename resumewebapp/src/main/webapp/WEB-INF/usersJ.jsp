@@ -3,12 +3,6 @@
 
 <%@ page import="java.util.List" %>
 
-<%--jstl tags--%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%--Spring tags--%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
@@ -43,28 +37,20 @@
 <div class="container">
     <div>
         <!--Form here -->
-        <%--<form action="users" method="get" class="form-inline">--%>
-        <f:form action="usersm" method="GET" modelAttribute="user">
+        <form action="users" method="get" class="form-inline">
             <div class="form-group mb-2">
                 <label for="name" class="sr-only">name </label>
-                <f:input path="name"
-                         class="form-control"
-                         id="name"
-                         placeholder="type name here"/>
-                <form:errors path="name" cssClass="error"/>
+                <input class="form-control" type="text" name="name" id="name" value="" placeholder="type name here">
             </div>
             <div class="form-group mx-sm-3 mb-2">
                 <label for="surname" class="sr-only">surname</label>
-                <f:input path="surname"
-                         class="form-control"
-                         id="surname"
-                         placeholder="type surname here"/>
-                <form:errors path="surname" cssClass="error"/>
+                <input class="form-control" type="text" name="surname" id="surname" value=""
+                       placeholder="type surname here">
             </div>
             <div class="form-group mb-2">
-                <f:button type="submit" class="btn btn-primary" value="Search">Search</f:button>
+                <input class="btn btn-primary" type="submit" name="search" value="Search">
             </div>
-        </f:form>
+        </form>
 
         <div>
             <!--Table here -->
@@ -80,34 +66,37 @@
                 </tr>
                 </thead>
                 <tbody>
-                <%--<%for (User list : lists) {%>--%>
-                <c:forEach items="${users}" var="u" >
-                    <tr>
-                        <td>${u.name}</td>
-                        <td>${u.surname}</td>
-                        <td>${u.nationality.name}</td>
-                        <td style="width:5px">
+                <%for (User list : lists) {%>
+                <tr scope="row">
+                    <td><%=list.getName()%>
+                    </td>
+                    <td><%=list.getSurname()%>
+                    </td>
+                    <td><%=list.getNationality().getName() == null ? "N/A" : list.getNationality().getName()%>
 
-                            <input type="hidden" name="id" value="${u.id}"/>
-                            <input type="hidden" name="action" value="delete"/>
-                            <button class="btn btn-danger" type="submit" value="delete"
-                                    data-toggle="modal" data-target="#exampleModal"
-                                    onclick="setIdForDelete(${u.id})">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </td>
-                        <td style="width:5px">
-                            <form action="userdetail" method="GET">
-                                <input type="hidden" name="id" value="${u.id}"/>
-                                <input type="hidden" name="action" value="update"/>
-                                <button class="btn btn-secondary" type="submit" value="update">
-                                    <i class="fas fa-pen-square"></i>
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                </c:forEach>
-                <%--<%}%>--%>
+                    </td>
+                    <td style="width:5px;">
+                        <form action="userdetail" method="get">
+                            <input type="hidden" name="id" value="<%=list.getId()%>"/>
+                            <input type="hidden" name="action" value="update"/>
+                            <button class="btn btn-warning" type="submit" value="update">Edit</button>
+                        </form>
+                    </td>
+                    <td style="width:5px;">
+
+                        <button onclick="idForDeleteModal('<%=list.getId()%>')" class="btn btn-danger" type="button" value="delete" data-toggle="modal"
+                                data-target="#deleteModal">Delete
+                        </button>
+
+                    </td>
+                    <td style="width:5px;">
+                        <form action="userdetail" method="get">
+                            <input type="hidden" name="id" value="<%=list.getId()%>"/>
+                        <button class="btn btn-secondary" type="submit" name="action" value="info">Info</button>
+                        </form>
+                    </td>
+                </tr>
+                <%}%>
                 </tbody>
             </table>
         </div>
