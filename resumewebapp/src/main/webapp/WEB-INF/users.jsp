@@ -21,6 +21,11 @@
     <title>JSP Page</title>
 </head>
 <body>
+<%--<%if(session.getAttribute("loggedInUser")!=null){%>--%>
+<%--<%User user=(User)session.getAttribute("loggedInUser");--%>
+    <%--out.print("Welcome "+user.getName());--%>
+<%--}--%>
+<%--%>--%>
 <%
 //    UserDaoInter userDao = Context.instanceUserDao();
 //

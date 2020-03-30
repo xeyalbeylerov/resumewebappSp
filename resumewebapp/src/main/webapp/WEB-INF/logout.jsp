@@ -16,21 +16,14 @@
 </head>
 <body class="login_background">
 
-<form action="login" method="POST">
+<form action="logout" method="POST">
     <%--action='<spring:url value="/login"/>'--%>
     <div class="col-4 container login_fix_">
         <center>
-            <h1>Login:</h1>
+            <h1>Logout:</h1>
         </center>
-        <div class="form-group">
-            <label>Email address</label>
-            <input type="text" class="form-control" placeholder="Username" name="username"/>
-        </div>
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" placeholder="Password" name="password"/>
-        </div>
-        <button type="submit" class="btn btn-primary" name="login">Login</button>
+
+        <button type="submit" class="btn btn-primary" name="login">Logout</button>
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
     </div>
 </form>

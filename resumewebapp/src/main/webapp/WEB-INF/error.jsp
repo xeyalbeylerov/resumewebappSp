@@ -1,6 +1,6 @@
 <%@ page import="com.company.dao.inter.UserDaoInter" %>
 <%@ page import="com.company.entity.User" %>
-<%@ page import="com.company.main.Context" %>
+<%--<%@ page import="com.company.main.Context" %>--%>
 <%@ page import="java.util.List" %>
 
 
@@ -12,7 +12,11 @@
      <title>Error Page</title>
 </head>
 <body>
-<%=request.getParameter( "msg")%>
+<%--<%<%String param=request.getParameter( "msg");--%>
+<%--if(param==null){--%>
+    <%--param="no";--%>
+<%--}%>%>--%>
+<%--<%=request.getParameter( "msg")%>--%>
 
 </body>
 </html>

@@ -1,5 +1,5 @@
 <%@ page import="com.company.entity.User" %>
-<%@ page import="com.company.resume.UserRequestUtil" %>
+<%--<%@ page import="com.company.resume.UserRequestUtil" %>--%>
 <%@ page import="com.company.entity.Skill" %>
 <%@ page import="com.company.entity.UserSkill" %>
 

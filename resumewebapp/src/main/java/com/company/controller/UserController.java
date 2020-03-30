@@ -3,6 +3,7 @@ package com.company.controller;
 
 import com.company.entity.User;
 import com.company.form.UserForm;
+import com.company.service.DummyService;
 import com.company.service.inter.UserServiceInter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -61,7 +62,10 @@ public class UserController {
 
 
     @RequestMapping(method = RequestMethod.GET, value = "/usersm")
-    public ModelAndView indexM(@Valid @ModelAttribute("user") UserForm u, BindingResult bindingResult) {
+    public ModelAndView indexM(
+            @Valid
+            @ModelAttribute("user") UserForm u,
+            BindingResult bindingResult) {
         ModelAndView mv = new ModelAndView("users");
         if(bindingResult.hasErrors()){
             return mv;
@@ -72,6 +76,28 @@ public class UserController {
 //    mv.addObject("user",new UserForm());
         mv.addObject("users", list);
         return mv;
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/login")
+    public String login() {
+       return "login";
+    }
+
+
+    @Autowired
+    DummyService dummyService;
+    @RequestMapping(method = RequestMethod.GET, value = "/foo")
+    public String foo() {
+        dummyService.foo();
+        dummyService.foo2();
+        return "foo";
+    }
+
+
+    @RequestMapping(method = RequestMethod.GET, value = "/logout")
+    public String logout() {
+
+        return "logout";
     }
 
 
