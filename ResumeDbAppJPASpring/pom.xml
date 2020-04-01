@@ -5,18 +5,21 @@
 
     <!--parent multimode yazildi-->
 	<parent>
-		<groupId>resume.multimodule</groupId>
-		<artifactId>resume.multimodule</artifactId>
-		<version>0.0.1</version>
-		<!--<groupId>org.springframework.boot</groupId>-->
-		<!--<artifactId>spring-boot-starter-parent</artifactId>-->
-		<!--<version>2.2.5.RELEASE</version>-->
+		<!--<groupId>resume.multimodule</groupId>-->
+		<!--<artifactId>resume.multimodule</artifactId>-->
+		<!--<version>0.0.1</version>-->
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.5.RELEASE</version>
+
+
 	</parent>
+
 
 	<!--DB appin artifakti-->
 	<groupId>com.company</groupId>
 	<artifactId>ResumeDbAppJPASpring</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<!--<name>ResumeDbAppJPASpring</name>-->
 	<!--<description>Resume DB App written in Spring Boot</description>-->
 

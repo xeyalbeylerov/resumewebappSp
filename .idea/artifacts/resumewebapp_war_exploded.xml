@@ -30,7 +30,6 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.4.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: jakarta.annotation:jakarta.annotation-api:1.3.5" />
@@ -41,9 +40,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.4.RELEASE" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
-          <element id="archive" name="ResumeDbAppJPASpring-0.0.1.jar">
-            <element id="module-output" name="ResumeDbAppJPASpring" />
-          </element>
+          <element id="library" level="project" name="Maven: com.company:ResumeDbAppJPASpring:0.0.1" />
           <element id="library" level="project" name="Maven: at.favre.lib:bcrypt:0.9.0" />
           <element id="library" level="project" name="Maven: at.favre.lib:bytes:1.3.0" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:2.2.5.RELEASE" />
@@ -75,6 +72,11 @@
           <element id="library" level="project" name="Maven: javax.validation:validation-api:2.0.1.Final" />
           <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" />
           <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.5.1" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-security:2.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.2.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.2.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.2.2.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">

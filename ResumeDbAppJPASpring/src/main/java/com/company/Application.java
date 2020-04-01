@@ -42,31 +42,31 @@ public class Application {
 //        return clr;
 //    }
 
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private UserServiceInter userDao;
-
-    @Bean
-    public CommandLineRunner run() {
-        CommandLineRunner clr = new CommandLineRunner() {
-
-            @Override
-            public void run(String... args) throws Exception {
-
-//                List<User> list = userRepository.findAll();
-//                List<User> list2 =userRepository.findAll(Sort.by(Sort.Order.desc("id")));
-//                System.out.println(list2);
-//                User u=userRepository.findByName("alim");
-//                User u2=userRepository.findByNameAndSurname("asif","Kamilov");
-//                User u3=userRepository.findByEmail("asim@gmail.com");
-                List<User> u=userDao.getAll(null,null,null);
-
-                System.out.println(u);
-
-            }
-        };
-        return clr;
-    }
+//    @Autowired
+//    private UserRepository userRepository;
+//
+//    @Autowired
+//    private UserServiceInter userDao;
+//
+//    @Bean
+//    public CommandLineRunner run() {
+//        CommandLineRunner clr = new CommandLineRunner() {
+//
+//            @Override
+//            public void run(String... args) throws Exception {
+//
+////                List<User> list = userRepository.findAll();
+////                List<User> list2 =userRepository.findAll(Sort.by(Sort.Order.desc("id")));
+////                System.out.println(list2);
+////                User u=userRepository.findByName("alim");
+////                User u2=userRepository.findByNameAndSurname("asif","Kamilov");
+////                User u3=userRepository.findByEmail("asim@gmail.com");
+//                List<User> u=userDao.getAll(null,null,null);
+//
+//                System.out.println(u);
+//
+//            }
+//        };
+//        return clr;
+//    }
 }

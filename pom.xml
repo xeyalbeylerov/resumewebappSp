@@ -16,10 +16,10 @@
 
 
     <!--modules elave olunan applarin adidir-->
-    <modules>
-        <module>ResumeDbAppJPASpring</module>
-        <module>resumewebapp</module>
-    </modules>
+    <!--<modules>-->
+        <!--<module>ResumeDbAppJPASpring</module>-->
+        <!--<module>resumewebapp</module>-->
+    <!--</modules>-->
 
     <!--esas pomun arifaktlari-->
     <groupId>resume.multimodule</groupId>
