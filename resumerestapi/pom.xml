@@ -60,6 +60,20 @@
             <artifactId>ResumeDbAppJPASpring</artifactId>
             <version>0.0.1</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId><!--user verify-->
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+           <groupId>org.springframework.security</groupId> <!--token verify and generate-->
+            <artifactId>spring-security-jwt</artifactId>
+            <version>1.0.9.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security.oauth</groupId><!--oauth2 serverini qaldirir, app verify-->
+            <artifactId>spring-security-oauth2</artifactId>
+            <version>2.3.4.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <build>

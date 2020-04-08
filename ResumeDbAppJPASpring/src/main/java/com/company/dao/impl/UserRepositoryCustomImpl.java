@@ -8,6 +8,7 @@ package com.company.dao.impl;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 import com.company.entity.User;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -273,11 +274,12 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom{
         return u;
     }
 
-    private static BCrypt.Hasher crypt = BCrypt.withDefaults();
+//    private static BCrypt.Hasher crypt = BCrypt.withDefaults();
+private static BCryptPasswordEncoder crypt = new BCryptPasswordEncoder();
 
     @Override
     public boolean addUser(User u) {
-        u.setPassword(crypt.hashToString(4, u.getPassword().toCharArray()));
+        u.setPassword(crypt.encode(u.getPassword()));
         em.persist(u);
         return true;
 //            stmt.setString(5, crypt.hashToString(4,u.getPassword().toCharArray()));
